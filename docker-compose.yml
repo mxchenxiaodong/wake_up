@@ -1,0 +1,8 @@
+version: '3'
+services:
+
+  wakeup_redis:
+    image: redis
+    volumes:
+      - /data/container_volumns/wakeup/redis/conf/redis_6379.conf:/usr/local/etc/redis/redis.conf
+      - /data/container_volumns/wakeup/redis/data:/data
