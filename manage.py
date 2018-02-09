@@ -4,7 +4,7 @@ import os
 from flask_script import Manager
 import ipdb
 
-from app import app, bcrypt
+from app import app, bcrypt, redis_conn
 from app.models import *
 
 

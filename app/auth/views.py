@@ -45,6 +45,8 @@ class RegisterAPI(MethodView):
                 #     status=201
                 # )
             except Exception as e:
+                app.logger.error(e)
+
                 responseObject = {
                     'status': 'fail',
                     'message': 'Some error occurred. Please try again.'
@@ -90,7 +92,8 @@ class LoginAPI(MethodView):
                 return make_response(jsonify(responseObject)), 404
 
         except Exception as e:
-            print(e)
+            app.logger.error(e)
+
             responseObject = {
                 'status': 'fail',
                 'message': 'System error.Try again'
@@ -126,6 +129,8 @@ class LogoutAPI(MethodView):
                     }
                     return make_response(jsonify(responseObject)), 200
                 except Exception as e:
+                    app.logger.error(e)
+
                     responseObject = {
                         'status': 'fail',
                         'message': e

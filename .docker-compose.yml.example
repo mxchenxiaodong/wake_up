@@ -2,7 +2,8 @@ version: '3'
 services:
   wakeup_app:
     image: wakeup
-
+    volumes:
+      - /data/container_volumns/wakeup/mongo/data/db:/data/db
 
   wakeup_mongo:
     image: mongo

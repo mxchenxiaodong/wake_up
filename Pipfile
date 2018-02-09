@@ -16,6 +16,7 @@ ipdb = "*"
 kafka-python = "*"
 pyjwt = "*"
 flask-bcrypt = "*"
+python-dotenv = "*"
 
 
 [dev-packages]
